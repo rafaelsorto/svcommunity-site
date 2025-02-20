@@ -1,3 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer theme, base, components, mantine, utilities;
+
+@import 'tailwindcss';
+
+@layer mantine {
+    @import '@mantine/core/styles.layer.css';
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
